@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- Primary Meta Tags -->
+<title>Typing Lab — Free Speed Test, Keyboard Practice & Typing Master Online</title>
+<meta name="title" content="Typing Lab — Free Speed Test, Keyboard Practice & Typing Master Online">
+<meta name="description" content="Boost your typing WPM and accuracy with Typing Lab! Free 10-day cyber typing course, interactive glowing keyboard, live performance tracker, and typing exam preparation.">
+<meta name="keywords" content="typing test, typing speed test, typing master, typing practice, typing exam, keyboard testing, learn typing online, WPM test, speed typing practice, online typing tutor">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Typing Lab Engine">
+<!-- Canonical Link (Duplicate Content Avoidance) -->
+<link rel="canonical" href="https://TypingLab.github.io/TypingLab/">
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Typing Lab">
+<meta property="og:url" content="https://TypingLab.github.io/TypingLab/">
+<meta property="og:title" content="Typing Lab — High-Performance Cyber Typing Engine">
+<meta property="og:description" content="Master finger placement & speed with 10 days of guided typing lessons. Try the live glowing keyboard now!">
+<meta property="og:image" content="https://TypingLab.github.io/TypingLab/preview.png">
+<!-- Twitter Cards -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://TypingLab.github.io/TypingLab/">
+<meta property="twitter:title" content="Typing Lab — Free Online Typing Test">
+<meta property="twitter:description" content="Test your WPM speed and accuracy with full live stats and 100 guided lessons.">
+<meta property="twitter:image" content="https://TypingLab.github.io/TypingLab/preview.png">
+<!-- Google Schema Structured Data (JSON-LD) - Top SEO Power -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Typing Lab",
+  "url": "https://TypingLab.github.io/TypingLab/",
+  "description": "High-performance web app to test typing speed, practice WPM accuracy, and learn proper finger placement with interactive glowing keyboard.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "All",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+
+<!-- Cyberpunk Unique Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%2339FFB0'/><stop offset='100%' stop-color='%2300E5FF'/></linearGradient></defs><rect x='32' y='32' width='448' height='448' rx='110' fill='%2305070F' stroke='url(%23g)' stroke-width='24'/><rect x='80' y='80' width='352' height='352' rx='70' fill='rgba(0,229,255,0.06)' stroke='%2300E5FF' stroke-width='10' stroke-opacity='0.4'/><path d='M130 170h130M195 170v170' stroke='url(%23g)' stroke-width='36' stroke-linecap='round'/><path d='M285 170v170h100' stroke='url(%23g)' stroke-width='36' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --ink:        #05070F;
+    --ink-2:      #070B16;
+    --panel:      rgba(14,22,42,0.65);
+    --panel-2:    rgba(20,32,58,0.75);
+    --line:       rgba(110,200,255,0.22);
+    --text:       #E6F3FF;
+    --text-dim:   #7488AC;
+    --amber:      #00E5FF;
+    --amber-dim:  rgba(0,229,255,0.14);
+    --mint:       #39FFB0;
+    --mint-dim:   rgba(57,255,176,0.14);
+    --rose:       #FF3B6B;
+    --rose-dim:   rgba(255,59,107,0.16);
+    --magenta:    #C24EFF;
+    --glow-cyan:  0 0 16px rgba(0,229,255,0.85), inset 0 0 8px rgba(0,229,255,0.3);
+    --glow-mint:  0 0 10px rgba(57,255,176,0.55);
+    --glow-rose:  0 0 10px rgba(255,59,107,0.55);
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color: transparent; }
+
+  body{
+    background:
+      radial-gradient(900px 500px at 12% -8%, rgba(0,229,255,0.14) 0%, transparent 60%),
+      radial-gradient(800px 460px at 108% 8%, rgba(194,78,255,0.12) 0%, transparent 55%),
+      repeating-linear-gradient(0deg, rgba(120,200,255,0.035) 0px, rgba(120,200,255,0.035) 1px, transparent 1px, transparent 42px),
+      repeating-linear-gradient(90deg, rgba(120,200,255,0.035) 0px, rgba(120,200,255,0.035) 1px, transparent 1px, transparent 42px),
+      var(--ink);
+    color:var(--text);
+    font-family:'Rajdhani', sans-serif;
+    font-weight:500;
+    min-height:100vh;
+    padding:16px 12px 40px;
+    padding-top: max(16px, env(safe-area-inset-top));
+    padding-bottom: max(40px, env(safe-area-inset-bottom));
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+    overflow-x: hidden;
+  }
+
+  ::selection{ background:rgba(0,229,255,0.35); color:#fff; }
+
+  /* ---------- INTRO OVERLAY ---------- */
+  .intro-overlay {
+    position: fixed; inset: 0; background: var(--ink); z-index: 1000;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 20px; transition: opacity 0.5s ease, visibility 0.5s ease;
+    background:
+      radial-gradient(1200px 700px at 50% 20%, rgba(0,229,255,0.2) 0%, transparent 70%),
+      radial-gradient(900px 600px at 50% 85%, rgba(194,78,255,0.18) 0%, transparent 65%),
+      var(--ink);
+  }
+  .intro-overlay.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+
+  .intro-card {
+    background: var(--panel-2); backdrop-filter: blur(25px);
+    border: 1px solid var(--line); border-radius: 20px; padding: 40px 32px;
+    max-width: 500px; width: 100%; text-align: center; position: relative;
+    box-shadow: 0 0 50px rgba(0,229,255,0.25);
+  }
+
+  .intro-badge {
+    display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    font-weight: 600; letter-spacing: 0.15em; color: var(--mint); background: var(--mint-dim);
+    border: 1px solid rgba(57,255,176,0.3); padding: 4px 12px; border-radius: 20px;
+    margin-bottom: 16px; text-transform: uppercase;
+  }
+
+  .intro-logo {
+    font-family: 'Orbitron', sans-serif; font-size: 34px; font-weight: 900;
+    letter-spacing: 0.05em; color: var(--text); text-shadow: 0 0 30px rgba(0,229,255,0.6);
+    margin-bottom: 6px;
+  }
+  .intro-logo span { color: var(--amber); }
+
+  .intro-sub { font-size: 13px; font-weight: 600; color: var(--text-dim); letter-spacing: 0.08em; margin-bottom: 24px; text-transform: uppercase; }
+
+  .btn-start {
+    width: 100%; padding: 16px; font-family: 'Orbitron', sans-serif; font-size: 15px; font-weight: 800;
+    letter-spacing: 0.12em; color: var(--ink); background: linear-gradient(90deg, var(--mint), var(--amber));
+    border: none; border-radius: 10px; cursor: pointer; box-shadow: 0 0 25px rgba(0,229,255,0.7);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-start:hover { transform: translateY(-2px); box-shadow: 0 0 35px rgba(0,229,255,0.95); }
+
+  .reset-link {
+    display: inline-block; font-size: 11px; color: var(--text-dim);
+    margin-top: 14px; cursor: pointer; text-decoration: underline;
+  }
+  .reset-link:hover { color: var(--rose); }
+
+  /* ---------- MAIN LAYOUT ---------- */
+  .wrap{ max-width:920px; margin:0 auto; width: 100%; }
+
+  header{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; margin-bottom:20px; }
+  .brand .mark{ font-family:'Orbitron', sans-serif; font-weight:800; font-size:26px; color:var(--text); text-shadow:0 0 18px rgba(0,229,255,0.35); }
+  .brand .mark span{ color:var(--amber); text-shadow:0 0 16px rgba(0,229,255,0.75); }
+  .brand .tag{ font-size:12px; font-weight:600; color:var(--text-dim); }
+
+  .header-actions { display: flex; gap: 8px; align-items: center; }
+
+  .sound-btn{
+    font-family:'Rajdhani'; font-weight:700; font-size:13px; padding:8px 14px;
+    border-radius:8px; border:1px solid var(--line); background:var(--panel);
+    color:var(--text-dim); cursor:pointer; transition:all .15s ease;
+  }
+  .sound-btn.active{ border-color:var(--amber); color:var(--amber); background:var(--amber-dim); box-shadow:var(--glow-cyan); }
+
+  /* ---------- DAY TABS & LESSON BUTTONS ---------- */
+  .day-tabs{ display:flex; gap:8px; overflow-x:auto; padding-bottom:8px; margin-bottom:12px; scrollbar-width:thin; }
+  
+  .day-btn{
+    font-family:'Rajdhani'; font-weight:700; font-size:12.5px; white-space:nowrap; flex-shrink:0;
+    padding:8px 14px; border-radius:8px; border:1px solid var(--line);
+    background:var(--panel); color:var(--text-dim); cursor:pointer; transition:all .2s ease;
+  }
+  .day-btn:hover{ 
+    border-color:var(--amber); 
+    color:var(--amber); 
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.4);
+  }
+  .day-btn.active{ 
+    background: rgba(0, 229, 255, 0.16); 
+    color: #00E5FF; 
+    border: 2px solid #00E5FF; 
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.85), inset 0 0 10px rgba(0, 229, 255, 0.3); 
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.9);
+    font-weight: 800;
+  }
+  .day-btn.locked{ opacity:.4; cursor:not-allowed; }
+
+  .lesson-strip{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:20px; }
+  .lesson-dot{
+    width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center;
+    font-family:'JetBrains Mono', monospace; font-size:12px; font-weight:600; color:var(--text-dim);
+    background:var(--panel); border:1px solid var(--line); cursor:pointer; transition:all .2s ease; flex-shrink:0;
+  }
+  .lesson-dot:hover{ 
+    border-color:var(--amber); 
+    color:var(--amber); 
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.4);
+  }
+  .lesson-dot.active{ 
+    background: rgba(0, 229, 255, 0.16); 
+    color: #00E5FF; 
+    border: 2px solid #00E5FF; 
+    box-shadow: 0 0 18px rgba(0, 229, 255, 0.85), inset 0 0 10px rgba(0, 229, 255, 0.3); 
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.9);
+    font-weight: 800;
+  }
+  .lesson-dot.done{ background:var(--mint-dim); color:var(--mint); border-color:rgba(57,255,176,0.4); }
+  .lesson-dot.locked{ opacity:.4; cursor:not-allowed; border-style:dashed; }
+
+  .diff-badge{
+    font-family:'Rajdhani'; font-size:10.5px; font-weight:700; padding:3px 8px;
+    border-radius:4px; margin-left:6px; letter-spacing:.06em; vertical-align:middle;
+    text-transform:uppercase; border:1px solid transparent; display: inline-block;
+  }
+  .diff-easy{ background:var(--mint-dim); color:var(--mint); border-color:rgba(57,255,176,0.4); }
+  .diff-medium{ background:var(--amber-dim); color:var(--amber); border-color:rgba(0,229,255,0.4); }
+  .diff-hard{ background:var(--rose-dim); color:var(--rose); border-color:rgba(255,59,107,0.4); }
+  .diff-veryhard{ background:rgba(194,78,255,0.16); color:var(--magenta); border-color:rgba(194,78,255,0.45); }
+
+  .stats{
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:1px;
+    background:var(--line); border:1px solid var(--line); border-radius:10px;
+    overflow:hidden; margin-bottom:18px; backdrop-filter:blur(14px);
+  }
+  .stat{ background:var(--panel); padding:12px 10px; text-align: center; }
+  .stat .num{ font-family:'JetBrains Mono', monospace; font-size:calc(18px + 0.5vw); font-weight:600; color:var(--amber); line-height:1; }
+  .stat .lbl{ font-size:10px; font-weight:700; color:var(--text-dim); margin-top:4px; letter-spacing:.06em; }
+
+  .panel{
+    background:var(--panel); backdrop-filter:blur(18px);
+    border:1px solid var(--line); border-radius:12px;
+    padding:20px; margin-bottom:18px; position:relative;
+  }
+
+  .panel-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; gap: 8px; flex-wrap: wrap; }
+  .panel-head .title{ font-size:13px; font-weight:700; color:var(--text-dim); }
+  .panel-head .actions{ display:flex; gap:8px; }
+  .icon-btn{
+    font-family:'Rajdhani'; font-size:12px; font-weight:700; color:var(--text-dim);
+    background:transparent; border:1px solid var(--line); border-radius:6px;
+    padding:5px 10px; cursor:pointer; transition:all .15s ease;
+  }
+  .icon-btn:hover{ color:var(--amber); border-color:var(--amber); box-shadow: 0 0 10px rgba(0,229,255,0.3); }
+
+  .prompt{
+    font-family:'JetBrains Mono', monospace; font-size:18px; line-height:1.7;
+    letter-spacing:0.01em; padding:6px 2px; user-select:none;
+    max-height: 180px; overflow-y: auto; word-break: break-word; min-height: 60px;
+  }
+  .prompt span{ position:relative; }
+  .ch-pending{ color:var(--text-dim); }
+  .ch-correct{ color:var(--mint); text-shadow:0 0 8px rgba(57,255,176,0.55); }
+  .ch-incorrect{ color:var(--rose); background:var(--rose-dim); border-radius:3px; }
+  .ch-current{ background:rgba(0,229,255,0.14); border-radius:3px; }
+  .ch-current::after{
+    content:''; position:absolute; left:0; bottom:-2px; width:100%; height:2px;
+    background:var(--amber); box-shadow:0 0 8px 1px rgba(0,229,255,0.8);
+    animation:blink 1s ease-in-out infinite;
+  }
+  @keyframes blink{ 0%,100%{ opacity:1; } 50%{ opacity:.35; } }
+
+  .type-input{ position:absolute; opacity:0; pointer-events:none; }
+
+  .hint{ font-size:12.5px; font-weight:600; color:var(--text-dim); margin-top:10px; display:flex; align-items:center; gap:8px; }
+  .hint .dot{ width:6px; height:6px; border-radius:50%; background:var(--amber); flex-shrink: 0; }
+
+  /* ---------- KEYBOARD ---------- */
+  .kb-wrap{
+    background:var(--panel-2); border:1px solid var(--line); border-radius:12px;
+    padding:16px 12px; margin-bottom:18px; position:relative; width: 100%; overflow: hidden;
+  }
+  .kb-title{ font-size:10.5px; font-weight:700; color:var(--text-dim); letter-spacing:.1em; margin-bottom:12px; text-transform:uppercase; text-align: center; }
+  .kb-row{ display:flex; justify-content:center; gap:4px; margin-bottom:5px; width: 100%; }
+
+  .key{
+    font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--text-dim);
+    background:rgba(255,255,255,0.03); border:1px solid var(--line); border-bottom:2px solid var(--line);
+    border-radius:5px; height:36px; flex: 1; max-width: 42px; min-width: 0;
+    display:flex; align-items:center; justify-content:center;
+    transition:background-color .08s ease, color .08s ease, border-color .08s ease; position:relative; user-select: none;
+  }
+  .key.space{ flex: 5; max-width: 240px; }
+  .key.lit{ background:rgba(0,229,255,0.22); color:var(--amber); border-color:var(--amber); box-shadow:var(--glow-cyan); }
+  .key.err{ background:rgba(255,59,107,0.22); color:var(--rose); border-color:var(--rose); box-shadow:var(--glow-rose); }
+  .key.key-next{
+    background: rgba(0, 229, 255, 0.35); color: #FFFFFF; border-color: var(--amber);
+    box-shadow: 0 0 16px rgba(0, 229, 255, 0.95); transform: translateY(-2px);
+    animation: keyPulseGlow 1.2s ease-in-out infinite alternate;
+  }
+  @keyframes keyPulseGlow { 0% { box-shadow: 0 0 8px rgba(0, 229, 255, 0.5); } 100% { box-shadow: 0 0 18px rgba(0, 229, 255, 1); } }
+  .key.home{ box-shadow: inset 0 0 0 1px rgba(57,255,176,0.4); }
+
+  .progress-row{ display:flex; align-items:center; gap:12px; }
+  .progress-track{ flex:1; height:7px; background:rgba(255,255,255,0.04); border-radius:99px; overflow:hidden; border:1px solid var(--line); }
+  .progress-fill{ height:100%; background:linear-gradient(90deg, var(--mint), var(--amber)); width:0%; transition:width .15s ease; }
+  .progress-label{ font-size:11.5px; font-weight:600; color:var(--text-dim); white-space:nowrap; }
+
+  /* ---------- RESULT OVERLAY ---------- */
+  .overlay{ position:fixed; inset:0; background:rgba(2,5,12,0.85); backdrop-filter:blur(8px); display:none; align-items:center; justify-content:center; z-index:500; padding:16px; }
+  .overlay.show{ display:flex; }
+  .result-card{
+    background:var(--panel-2); border:1px solid var(--line); border-radius:16px; padding:24px; max-width:420px; width:100%; text-align:center;
+  }
+  .result-card .headline{ font-family:'Orbitron', sans-serif; font-size:18px; font-weight:800; margin-bottom:4px; }
+  .result-card .sub{ font-size:12.5px; font-weight:600; color:var(--text-dim); margin-bottom:20px; line-height: 1.4; }
+
+  .result-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:20px; }
+  .result-item{ background:rgba(255,255,255,0.03); border:1px solid var(--line); border-radius:8px; padding:12px; }
+  .result-item .v{ font-family:'JetBrains Mono'; font-size:20px; color:var(--amber); font-weight:600; }
+  .result-item .k{ font-size:10px; font-weight:600; color:var(--text-dim); margin-top:2px; text-transform:uppercase; }
+
+  .result-actions{ display:flex; gap:10px; }
+  .btn-primary{ flex:1; background:rgba(0,229,255,0.16); color:var(--amber); border:1px solid var(--amber); border-radius:8px; padding:12px; font-weight:700; font-size:13.5px; cursor:pointer; font-family:'Rajdhani'; }
+  .btn-ghost{ flex:1; background:transparent; color:var(--text); border:1px solid var(--line); border-radius:8px; padding:12px; font-weight:700; font-size:13.5px; cursor:pointer; font-family:'Rajdhani'; }
+
+  footer{ text-align:center; font-size:11.5px; font-weight:600; color:var(--text-dim); margin-top:12px; }
+</style>
+</head>
+<body>
+
+<div class="intro-overlay" id="introOverlay">
+  <div class="intro-card">
+    <div class="intro-badge">TYPING LAB ENGINE READY</div>
+    <div class="intro-logo">Typing <span>Lab</span></div>
+    <div class="intro-sub">Next-Gen Cyber Typing Platform</div>
+    <button class="btn-start" id="btnStartApp">INITIALIZE SYSTEM</button>
+    <div class="reset-link" id="btnResetProgress">RESET PROGRESS & START OVER</div>
+  </div>
+</div>
+
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="mark">Typing <span>Lab</span></div>
+      <div class="tag">Master finger placement & typing speed step-by-step</div>
+    </div>
+    <div class="header-actions">
+      <button class="sound-btn active" id="btnToggleSound">🔊 Sound On</button>
+    </div>
+  </header>
+
+  <div class="day-tabs" id="dayTabs"></div>
+  <div class="lesson-strip" id="lessonStrip"></div>
+
+  <div class="stats">
+    <div class="stat"><div class="num" id="statWpm">0</div><div class="lbl">WPM</div></div>
+    <div class="stat"><div class="num" id="statAcc">100%</div><div class="lbl">ACCURACY</div></div>
+    <div class="stat"><div class="num" id="statTime">0s</div><div class="lbl">TIME ELAPSED</div></div>
+    <div class="stat"><div class="num" id="statErr">0</div><div class="lbl">ERRORS</div></div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <div class="title" id="panelTitle">Day 1 — Lesson 1</div>
+      <div class="actions">
+        <button class="icon-btn" id="btnShowResult">🏆 Result</button>
+        <button class="icon-btn" id="btnNewText">New text</button>
+        <button class="icon-btn" id="btnRestart">Restart</button>
+      </div>
+    </div>
+    <div class="prompt" id="promptEl">Loading lesson...</div>
+    <input class="type-input" id="typeInput" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">
+    <div class="hint"><span class="dot"></span><span id="hintText">Tap anywhere or start typing to begin</span></div>
+  </div>
+
+  <div class="kb-wrap">
+    <div class="kb-title">LIVE KEYBOARD — Glowing key indicates your NEXT target</div>
+    <div id="kbBoard"></div>
+  </div>
+
+  <div class="panel">
+    <div class="progress-row">
+      <div class="progress-track"><div class="progress-fill" id="progFill"></div></div>
+      <div class="progress-label" id="progLabel">0 / 0 characters</div>
+    </div>
+  </div>
+
+  <footer>Typing Lab Engine — 10 Days, 100 Guided Lessons. High-Speed Performance.</footer>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="result-card">
+    <div class="headline" id="rHeadline">Lesson Performance 🎉</div>
+    <div class="sub" id="rSub">Current Performance Breakdown</div>
+    <div class="result-grid">
+      <div class="result-item"><div class="v" id="rWpm">0</div><div class="k">WPM</div></div>
+      <div class="result-item"><div class="v" id="rAcc">0%</div><div class="k">Accuracy</div></div>
+      <div class="result-item"><div class="v" id="rTime">0s</div><div class="k">Time</div></div>
+      <div class="result-item"><div class="v" id="rErr">0</div><div class="k">Errors</div></div>
+    </div>
+    <div class="result-actions">
+      <button class="btn-ghost" id="btnAgain">Try Again (Esc)</button>
+      <button class="btn-primary" id="btnNext">Next Lesson (Enter ↵)</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  'use strict';
+
+  // --- MINIMUM REQUIREMENT CONSTANTS ---
+  const MIN_PASS_WPM = 20;
+  const MIN_PASS_ACC = 65;
+
+  // --- AUDIO ENGINE ---
+  let soundEnabled = true;
+  let audioCtx = null;
+
+  function initAudio(){
+    if (!audioCtx) {
+      const AudioCtxClass = window.AudioContext || window.webkitAudioContext;
+      if (AudioCtxClass) audioCtx = new AudioCtxClass();
+    }
+    if (audioCtx && audioCtx.state === 'suspended') {
+      audioCtx.resume().catch(()=>{});
+    }
+  }
+
+  function playKeyClickSound(isError = false){
+    if (!soundEnabled || !audioCtx) return;
+    try {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = isError ? 'sawtooth' : 'sine';
+      osc.frequency.setValueAtTime(isError ? 160 : 600 + Math.random() * 150, audioCtx.currentTime);
+      gain.gain.setValueAtTime(isError ? 0.08 : 0.025, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.035);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.035);
+    } catch(e) {}
+  }
+
+  // --- DATA & CONTENT ---
+  const DAY1_DRILLS = [
+    "asdf jkl; asdf jkl; asdf jkl; asdf jkl;",
+    "ff jj dd kk ss ll aa ;; ff jj dd kk",
+    "fjdksla; fjdksla; fjdksla; fjdksla;",
+    "dad sad lad ask fall flask glass salad gas",
+    "a sad dad. a small glass. a fall salad. ask a lad.",
+    "ru eit ru eit ru eit ru eit ru eit",
+    "red sun fun run rug kit sit fit tip",
+    "the cat sat on the mat. a big red cup.",
+    "quick dog run up. green tree in park.",
+    "The quick brown fox jumps over the lazy dog."
+  ];
+
+  const TIER_A = ["sad","dad","hall","fall","glass","flask","salad","gas","lad","has","small","cat","sat","flat","mat","she","and","the","a","is","on","in","at","up","run","sun","fun","big","red","dog","cup","top","hat","bat","pen","ink","jak","ask"];
+  
+  function mulberry32(seed){
+    return function(){
+      seed |= 0; seed = (seed + 0x6D2B79F5) | 0;
+      let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+
+  function difficultyInfo(idx){
+    if (idx <= 10) return { label: 'Finger Intro', cls: 'diff-easy' };
+    if (idx <= 30) return { label: 'Easy', cls: 'diff-easy' };
+    if (idx <= 60) return { label: 'Medium', cls: 'diff-medium' };
+    if (idx <= 85) return { label: 'Hard', cls: 'diff-hard' };
+    return { label: 'Very Hard', cls: 'diff-veryhard' };
+  }
+
+  function generateLessonText(day, lesson){
+    if (day === 1) return DAY1_DRILLS[lesson - 1] || DAY1_DRILLS[0];
+    const rng = mulberry32(day * 1000 + lesson * 17);
+    const wordCount = 18 + Math.floor(lesson * 1.5);
+    const words = [];
+    for (let i = 0; i < wordCount; i++){
+      words.push(TIER_A[Math.floor(rng() * TIER_A.length)]);
+    }
+    return words.join(' ') + '.';
+  }
+
+  const TOTAL_DAYS = 10;
+  const LESSONS_PER_DAY = 10;
+  const KEY_ROWS = [
+    ["1","2","3","4","5","6","7","8","9","0"],
+    ["q","w","e","r","t","y","u","i","o","p"],
+    ["a","s","d","f","g","h","j","k","l",";"],
+    ["z","x","c","v","b","n","m",",","."]
+  ];
+  const HOME_KEYS = new Set(['a','s','d','f','j','k','l',';']);
+
+  // --- STATE ---
+  let completed = new Set();
+  let unlocked = new Set(['1-1']);
+  let currentDay = 1;
+  let currentLesson = 1;
+  let currentText = "";
+  let typedChars = 0;
+  let errorCount = 0;
+  let startTime = null;
+  let timerInterval = null;
+  let prevInputLen = 0;
+  const keyDomMap = new Map();
+
+  // --- DOM CACHE ---
+  const DOM = {};
+
+  function cacheDOM(){
+    DOM.dayTabs = document.getElementById('dayTabs');
+    DOM.lessonStrip = document.getElementById('lessonStrip');
+    DOM.promptEl = document.getElementById('promptEl');
+    DOM.typeInput = document.getElementById('typeInput');
+    DOM.panelTitle = document.getElementById('panelTitle');
+    DOM.hintText = document.getElementById('hintText');
+    DOM.statWpm = document.getElementById('statWpm');
+    DOM.statAcc = document.getElementById('statAcc');
+    DOM.statTime = document.getElementById('statTime');
+    DOM.statErr = document.getElementById('statErr');
+    DOM.progFill = document.getElementById('progFill');
+    DOM.progLabel = document.getElementById('progLabel');
+    DOM.kbBoard = document.getElementById('kbBoard');
+    DOM.overlay = document.getElementById('overlay');
+    DOM.introOverlay = document.getElementById('introOverlay');
+    DOM.btnStartApp = document.getElementById('btnStartApp');
+    DOM.btnResetProgress = document.getElementById('btnResetProgress');
+    DOM.btnToggleSound = document.getElementById('btnToggleSound');
+    DOM.btnNext = document.getElementById('btnNext');
+    DOM.btnAgain = document.getElementById('btnAgain');
+  }
+
+  function key(d, l){ return `${d}-${l}`; }
+  function isUnlocked(d, l){ return unlocked.has(key(d, l)); }
+
+  function loadProgress() {
+    try {
+      const savedCompleted = localStorage.getItem('tl_completed');
+      const savedUnlocked = localStorage.getItem('tl_unlocked');
+      if (savedCompleted) completed = new Set(JSON.parse(savedCompleted));
+      if (savedUnlocked) unlocked = new Set(JSON.parse(savedUnlocked));
+    } catch (e) {}
+  }
+
+  function saveProgress() {
+    try {
+      localStorage.setItem('tl_completed', JSON.stringify([...completed]));
+      localStorage.setItem('tl_unlocked', JSON.stringify([...unlocked]));
+    } catch (e) {}
+  }
+
+  function buildKeyboard(){
+    DOM.kbBoard.innerHTML = '';
+    keyDomMap.clear();
+
+    KEY_ROWS.forEach(row => {
+      const rowEl = document.createElement('div');
+      rowEl.className = 'kb-row';
+      row.forEach(k => {
+        const keyEl = document.createElement('div');
+        keyEl.className = 'key' + (HOME_KEYS.has(k) ? ' home' : '');
+        keyEl.textContent = k.toUpperCase();
+        rowEl.appendChild(keyEl);
+        keyDomMap.set(k, keyEl);
+      });
+      DOM.kbBoard.appendChild(rowEl);
+    });
+
+    const spaceRow = document.createElement('div');
+    spaceRow.className = 'kb-row';
+    const spaceKey = document.createElement('div');
+    spaceKey.className = 'key space';
+    spaceKey.textContent = 'SPACE';
+    spaceRow.appendChild(spaceKey);
+    DOM.kbBoard.appendChild(spaceRow);
+    keyDomMap.set(' ', spaceKey);
+  }
+
+  function highlightNextTargetKey(){
+    keyDomMap.forEach(el => el.classList.remove('key-next'));
+    if (typedChars < currentText.length) {
+      const nextChar = currentText[typedChars].toLowerCase();
+      const targetEl = keyDomMap.get(nextChar);
+      if (targetEl) targetEl.classList.add('key-next');
+    }
+  }
+
+  function highlightKey(ch, isErr = false){
+    const el = keyDomMap.get(ch.toLowerCase());
+    if (!el) return;
+    const cls = isErr ? 'err' : 'lit';
+    el.classList.add(cls);
+    setTimeout(() => el.classList.remove(cls), 120);
+  }
+
+  function renderDayTabs(){
+    let html = '';
+    for (let d = 1; d <= TOTAL_DAYS; d++){
+      const unl = isUnlocked(d, 1);
+      const active = d === currentDay ? 'active' : '';
+      const locked = !unl ? 'locked' : '';
+      html += `<button class="day-btn ${active} ${locked}" data-day="${d}">${unl ? 'Day ' + d : '🔒 Day ' + d}</button>`;
+    }
+    DOM.dayTabs.innerHTML = html;
+  }
+
+  function renderLessonStrip(){
+    let html = '';
+    for (let l = 1; l <= LESSONS_PER_DAY; l++){
+      const k = key(currentDay, l);
+      const unl = isUnlocked(currentDay, l);
+      const isDone = completed.has(k);
+      const active = l === currentLesson ? 'active' : '';
+      const done = isDone ? 'done' : '';
+      const locked = !unl ? 'locked' : '';
+      html += `<button class="lesson-dot ${active} ${done} ${locked}" data-lesson="${l}">${!unl ? '🔒' : l}</button>`;
+    }
+    DOM.lessonStrip.innerHTML = html;
+  }
+
+  function loadLesson(){
+    currentText = generateLessonText(currentDay, currentLesson);
+    DOM.typeInput.value = '';
+    typedChars = 0;
+    errorCount = 0;
+    prevInputLen = 0;
+    startTime = null;
+    clearInterval(timerInterval);
+
+    const idx = (currentDay - 1) * 10 + currentLesson;
+    const diff = difficultyInfo(idx);
+    DOM.panelTitle.innerHTML = `Day ${currentDay} — Lesson ${currentLesson} <span class="diff-badge ${diff.cls}">${diff.label}</span>`;
+    DOM.hintText.textContent = `Unlock Target: Min ${MIN_PASS_WPM} WPM & ${MIN_PASS_ACC}% Accuracy`;
+
+    renderPrompt();
+    updateStats();
+    highlightNextTargetKey();
+  }
+
+  function renderPrompt(){
+    const val = DOM.typeInput.value;
+    let html = '';
+    const len = currentText.length;
+    for (let i = 0; i < len; i++){
+      let cls = 'ch-pending';
+      if (i < val.length){
+        cls = (val[i] === currentText[i]) ? 'ch-correct' : 'ch-incorrect';
+      } else if (i === val.length){
+        cls = 'ch-current';
+      }
+      const ch = currentText[i] === ' ' ? '&nbsp;' : currentText[i];
+      html += `<span class="${cls}">${ch}</span>`;
+    }
+    DOM.promptEl.innerHTML = html;
+    DOM.progFill.style.width = `${Math.round((val.length / len) * 100)}%`;
+    DOM.progLabel.textContent = `${val.length} / ${len} characters`;
+  }
+
+  function updateStats(){
+    const elapsedSec = startTime ? (Date.now() - startTime) / 1000 : 0;
+    const wpm = elapsedSec > 0 ? Math.round(((typedChars / 5) / elapsedSec) * 60) : 0;
+    const accuracy = (typedChars + errorCount > 0) ? Math.max(0, Math.round((typedChars / (typedChars + errorCount)) * 100)) : 100;
+
+    DOM.statWpm.textContent = wpm;
+    DOM.statAcc.textContent = `${accuracy}%`;
+    DOM.statErr.textContent = errorCount;
+    DOM.statTime.textContent = elapsedSec > 0 ? `${Math.round(elapsedSec)}s` : '0s';
+  }
+
+  // --- STRICT PASSING & UNLOCK SYSTEM ---
+  function finishLesson(){
+    if (DOM.overlay.classList.contains('show')) return;
+    clearInterval(timerInterval);
+    const elapsedSec = startTime ? Math.max(Math.round((Date.now() - startTime) / 1000), 1) : 1;
+    
+    const finalWpm = parseInt(DOM.statWpm.textContent, 10) || 0;
+    const finalAcc = parseInt(DOM.statAcc.textContent, 10) || 0;
+
+    const isPassed = (finalWpm >= MIN_PASS_WPM) && (finalAcc >= MIN_PASS_ACC);
+
+    if (isPassed) {
+      completed.add(key(currentDay, currentLesson));
+      if (currentLesson < LESSONS_PER_DAY) unlocked.add(key(currentDay, currentLesson + 1));
+      else if (currentDay < TOTAL_DAYS) unlocked.add(key(currentDay + 1, 1));
+      
+      saveProgress();
+      renderDayTabs();
+      renderLessonStrip();
+
+      document.getElementById('rHeadline').textContent = "Lesson Passed! 🎉";
+      document.getElementById('rHeadline').style.color = "var(--mint)";
+      document.getElementById('rSub').textContent = `Great job! Speed: ${finalWpm} WPM | Acc: ${finalAcc}%. Next lesson unlocked!`;
+      DOM.btnNext.style.display = "inline-block";
+    } else {
+      document.getElementById('rHeadline').textContent = "Lesson Failed ❌";
+      document.getElementById('rHeadline').style.color = "var(--rose)";
+      document.getElementById('rSub').textContent = `Target Not Met! Requires Min ${MIN_PASS_WPM} WPM & ${MIN_PASS_ACC}% Accuracy to unlock.`;
+      DOM.btnNext.style.display = "none"; // Hide next button if failed
+    }
+
+    document.getElementById('rWpm').textContent = finalWpm;
+    document.getElementById('rAcc').textContent = `${finalAcc}%`;
+    document.getElementById('rTime').textContent = `${elapsedSec}s`;
+    document.getElementById('rErr').textContent = errorCount;
+    DOM.overlay.classList.add('show');
+  }
+
+  // --- EVENTS ---
+  document.addEventListener('DOMContentLoaded', () => {
+    cacheDOM();
+    loadProgress();
+    buildKeyboard();
+    renderDayTabs();
+    renderLessonStrip();
+    loadLesson();
+
+    DOM.btnStartApp.addEventListener('click', () => {
+      initAudio();
+      DOM.introOverlay.classList.add('hidden');
+      DOM.typeInput.focus();
+    });
+
+    DOM.btnToggleSound.addEventListener('click', () => {
+      soundEnabled = !soundEnabled;
+      DOM.btnToggleSound.textContent = soundEnabled ? "🔊 Sound On" : "🔇 Sound Off";
+      DOM.btnToggleSound.classList.toggle('active', soundEnabled);
+    });
+
+    DOM.btnResetProgress.addEventListener('click', () => {
+      if (confirm("Reset all saved progress?")) {
+        localStorage.clear();
+        completed = new Set();
+        unlocked = new Set(['1-1']);
+        currentDay = 1;
+        currentLesson = 1;
+        saveProgress();
+        renderDayTabs();
+        renderLessonStrip();
+        loadLesson();
+      }
+    });
+
+    DOM.dayTabs.addEventListener('click', (e) => {
+      const btn = e.target.closest('.day-btn');
+      if (!btn) return;
+      const d = parseInt(btn.dataset.day, 10);
+      if (isUnlocked(d, 1)) {
+        currentDay = d;
+        currentLesson = 1;
+        renderDayTabs();
+        renderLessonStrip();
+        loadLesson();
+      }
+    });
+
+    DOM.lessonStrip.addEventListener('click', (e) => {
+      const dot = e.target.closest('.lesson-dot');
+      if (!dot) return;
+      const l = parseInt(dot.dataset.lesson, 10);
+      if (isUnlocked(currentDay, l)) {
+        currentLesson = l;
+        renderLessonStrip();
+        loadLesson();
+      }
+    });
+
+    // Global Keyboard Navigation
+    document.addEventListener('keydown', (e) => {
+      if (DOM.overlay.classList.contains('show')) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          if (DOM.btnNext.style.display !== 'none') {
+            DOM.btnNext.click();
+          } else {
+            DOM.btnAgain.click();
+          }
+          return;
+        }
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          DOM.btnAgain.click();
+          return;
+        }
+      }
+      
+      if (!DOM.introOverlay.classList.contains('hidden')) return;
+      DOM.typeInput.focus();
+    });
+
+    document.querySelector('.panel').addEventListener('click', () => DOM.typeInput.focus());
+
+    DOM.typeInput.addEventListener('input', () => {
+      if (!startTime) {
+        startTime = Date.now();
+        timerInterval = setInterval(updateStats, 250);
+      }
+      
+      let val = DOM.typeInput.value;
+      if (val.length > currentText.length) {
+        val = val.slice(0, currentText.length);
+        DOM.typeInput.value = val;
+      }
+
+      if (val.length > prevInputLen) {
+        for (let i = prevInputLen; i < val.length; i++) {
+          const isWrong = val[i] !== currentText[i];
+          highlightKey(val[i], isWrong);
+          playKeyClickSound(isWrong);
+          if (isWrong) errorCount++;
+        }
+      }
+      
+      prevInputLen = val.length;
+      typedChars = val.length;
+
+      renderPrompt();
+      highlightNextTargetKey();
+      updateStats();
+
+      if (val.length >= currentText.length) {
+        finishLesson();
+      }
+    });
+
+    // Manual Result Preview Button Click
+    document.getElementById('btnShowResult').onclick = () => {
+      document.getElementById('rHeadline').textContent = "Current Progress 📊";
+      document.getElementById('rHeadline').style.color = "var(--amber)";
+      document.getElementById('rSub').textContent = `Required to Pass: Min ${MIN_PASS_WPM} WPM & ${MIN_PASS_ACC}% Accuracy.`;
+      document.getElementById('rWpm').textContent = DOM.statWpm.textContent;
+      document.getElementById('rAcc').textContent = DOM.statAcc.textContent;
+      document.getElementById('rTime').textContent = DOM.statTime.textContent;
+      document.getElementById('rErr').textContent = DOM.statErr.textContent;
+      DOM.btnNext.style.display = "none";
+      DOM.overlay.classList.add('show');
+    };
+
+    document.getElementById('btnNewText').onclick = loadLesson;
+    document.getElementById('btnRestart').onclick = loadLesson;
+
+    DOM.btnAgain.onclick = () => { 
+      DOM.overlay.classList.remove('show'); 
+      loadLesson(); 
+    };
+
+    DOM.btnNext.onclick = () => {
+      DOM.overlay.classList.remove('show');
+      if (currentLesson < LESSONS_PER_DAY) currentLesson++;
+      else if (currentDay < TOTAL_DAYS) { currentDay++; currentLesson = 1; }
+      renderDayTabs();
+      renderLessonStrip();
+      loadLesson();
+    };
+  });
+</script>
+</body>
+</html>
