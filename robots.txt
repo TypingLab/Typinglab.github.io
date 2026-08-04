@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://typinglab.github.io/typinglab/sitemap.xml
