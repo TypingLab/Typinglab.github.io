@@ -2450,6 +2450,31 @@ footer{ text-align:center; margin-top:20px; padding-top:18px; border-top:1px sol
 
   // --- EVENTS ---
   document.addEventListener('DOMContentLoaded', () => {
+    // Footer policy links — open as in-page modals, no separate pages needed
+const footerModals = {
+  linkPrivacy: 'privacyOverlay',
+  linkContact: 'contactOverlay',
+  linkTerms: 'termsOverlay'
+};
+Object.entries(footerModals).forEach(([linkId, overlayId]) => {
+  const link = document.getElementById(linkId);
+  const overlay = document.getElementById(overlayId);
+  if (!link || !overlay) return;
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    overlay.classList.add('show');
+  });
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) overlay.classList.remove('show');
+  });
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key !== 'Escape') return;
+  Object.values(footerModals).forEach(overlayId => {
+    const overlay = document.getElementById(overlayId);
+    if (overlay) overlay.classList.remove('show');
+  });
+});
     cacheGameDOM();
     setMode('fruit');
     gameDOM.startBtn.addEventListener('click', startGame);
