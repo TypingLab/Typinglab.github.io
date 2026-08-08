@@ -697,6 +697,38 @@
   .switch-title{ font-family:'Orbitron', sans-serif; font-weight:800; font-size:19px; color:var(--text); }
   .switch-sub{ font-size:14px; font-weight:600; color:var(--text-dim); }
   .switch-tile.active .switch-title{ color:#00E5FF; text-shadow:0 0 8px rgba(0,229,255,0.7); }
+/* ---------- FOOTER ---------- */
+footer{ text-align:center; margin-top:20px; padding-top:18px; border-top:1px solid var(--line); }
+.footer-links{ display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; margin-bottom:10px; }
+.footer-links a{
+  font-size:12.5px; font-weight:700; color:var(--text-dim); text-decoration:none;
+  transition:color .15s ease, text-shadow .15s ease;
+}
+.footer-links a:hover{ color:var(--amber); text-shadow:0 0 8px rgba(0,229,255,0.6); }
+.footer-dot{ color:var(--line); font-size:12px; }
+.footer-tagline{ font-size:11.5px; font-weight:600; color:var(--text-dim); margin-bottom:4px; }
+.footer-copyright{ font-size:10.5px; font-weight:600; color:rgba(116,136,172,0.6); }
+
+/* ---------- Policy / Contact modals ---------- */
+.policy-modal-body{
+  text-align:left; max-height:56vh; overflow-y:auto; padding-right:6px;
+  font-size:13px; line-height:1.75; color:var(--text-dim);
+}
+.policy-modal-body::-webkit-scrollbar{ width:5px; }
+.policy-modal-body::-webkit-scrollbar-thumb{ background:var(--line); border-radius:4px; }
+.policy-modal-body h3{
+  font-family:'Rajdhani'; font-size:14.5px; font-weight:700; color:var(--text);
+  margin:16px 0 6px;
+}
+.policy-modal-body h3:first-child{ margin-top:0; }
+.policy-modal-body p{ margin-bottom:10px; }
+.policy-modal-body a{ color:var(--amber); }
+.policy-modal-body strong{ color:var(--text); }
+.contact-email-box{
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  background:rgba(0,229,255,0.08); border:1px solid rgba(0,229,255,0.3); border-radius:10px;
+  padding:14px; margin:14px 0; font-family:'JetBrains Mono', monospace; font-weight:600; color:var(--amber);
+}
 </style>
 </head>
 <body>
@@ -927,11 +959,18 @@
       <div class="switch-sub">NADRA / PPSC / FPSC style</div>
     </div>
   </div>
-
-  <footer>Typing Lab Engine — 10 Days, 100 Guided Lessons. High-Speed Performance.</footer>
+<footer>
+  <div class="footer-links">
+    <a href="#" id="linkPrivacy">Privacy Policy</a>
+    <span class="footer-dot">•</span>
+    <a href="#" id="linkContact">Contact Us</a>
+    <span class="footer-dot">•</span>
+    <a href="#" id="linkTerms">Terms of Service</a>
+  </div>
+  <div class="footer-tagline">Typing Lab Engine — 10 Days, 100 Guided Lessons. High-Speed Performance.</div>
+  <div class="footer-copyright">© 2026 Typing Lab. All rights reserved.</div>
+</footer>
 </div>
-
-
 <div class="overlay" id="overlay">
   <div class="result-card">
     <div class="headline" id="rHeadline">Lesson Performance 🎉</div>
@@ -964,6 +1003,86 @@
       <button class="btn-primary" id="advBtnNext">Next Task</button>
     </div>
   </div>
+  <!-- ===== PRIVACY POLICY MODAL ===== -->
+<div class="overlay" id="privacyOverlay">
+  <div class="result-card" style="max-width:560px;">
+    <div class="headline">Privacy Policy</div>
+    <div class="sub">Last updated: August 2026</div>
+    <div class="policy-modal-body">
+      <h3>What We Collect</h3>
+      <p>Typing Lab runs entirely in your browser. We do not require sign-up, and we do not collect your name, email, or any personal information to use the typing lessons, games, or tests.</p>
+
+      <h3>Local Storage</h3>
+      <p>Your lesson progress, scores, and settings are saved <strong>only on your own device</strong> using your browser's local storage. This data never leaves your device and is not sent to any server we control.</p>
+
+      <h3>Cookies &amp; Advertising</h3>
+      <p>This site may display ads served by third-party advertising partners (such as Google AdSense). These partners may use cookies or similar technologies to show ads based on your visits to this and other websites. You can opt out of personalized advertising by visiting <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a>.</p>
+
+      <h3>Analytics</h3>
+      <p>We may use privacy-respecting analytics to understand overall traffic (e.g., number of visitors, popular pages). This data is aggregated and not used to identify individual users.</p>
+
+      <h3>Third-Party Links</h3>
+      <p>Our site may link to external resources. We are not responsible for the privacy practices of other websites.</p>
+
+      <h3>Children's Privacy</h3>
+      <p>Typing Lab does not knowingly collect personal information from children under 13. The site is intended for general audiences learning to type.</p>
+
+      <h3>Changes to This Policy</h3>
+      <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated revision date.</p>
+
+      <h3>Contact</h3>
+      <p>Questions about this policy? Reach out via the <a href="#" onclick="document.getElementById('privacyOverlay').classList.remove('show'); document.getElementById('contactOverlay').classList.add('show'); return false;">Contact Us</a> page.</p>
+    </div>
+    <div class="result-actions">
+      <button class="btn-primary" style="flex:none; width:100%;" onclick="document.getElementById('privacyOverlay').classList.remove('show')">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CONTACT US MODAL ===== -->
+<div class="overlay" id="contactOverlay">
+  <div class="result-card" style="max-width:480px;">
+    <div class="headline">Contact Us</div>
+    <div class="sub">We'd love to hear from you — feedback, bug reports, or questions.</div>
+    <div class="policy-modal-body" style="text-align:center;">
+      <p>For any inquiries related to Typing Lab, please reach us at:</p>
+      <div class="contact-email-box">
+        ✉️ <a href="mailto:malikusman2jb@gmail.com" style="color:inherit; text-decoration:none;">malikusman2jb@gmail.com</a>
+      </div>
+      <p style="font-size:12px;">We usually respond within 24–48 hours.</p>
+    </div>
+    <div class="result-actions">
+      <button class="btn-primary" style="flex:none; width:100%;" onclick="document.getElementById('contactOverlay').classList.remove('show')">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TERMS OF SERVICE MODAL ===== -->
+<div class="overlay" id="termsOverlay">
+  <div class="result-card" style="max-width:560px;">
+    <div class="headline">Terms of Service</div>
+    <div class="sub">Last updated: August 2026</div>
+    <div class="policy-modal-body">
+      <h3>Using Typing Lab</h3>
+      <p>Typing Lab is a free, browser-based typing practice platform. By using this site, you agree to use it for lawful, personal, and educational purposes only.</p>
+
+      <h3>No Warranty</h3>
+      <p>This site is provided "as is" without warranties of any kind. We do not guarantee uninterrupted or error-free operation.</p>
+
+      <h3>Your Content</h3>
+      <p>Any text you type into practice lessons stays in your browser and is never transmitted or stored on our servers.</p>
+
+      <h3>Advertising</h3>
+      <p>This site may be supported by advertising. Ads are served by third-party networks and are subject to their own terms and privacy policies.</p>
+
+      <h3>Changes</h3>
+      <p>We may update these Terms at any time. Continued use of the site after changes means you accept the updated Terms.</p>
+    </div>
+    <div class="result-actions">
+      <button class="btn-primary" style="flex:none; width:100%;" onclick="document.getElementById('termsOverlay').classList.remove('show')">Close</button>
+    </div>
+  </div>
+</div>
 </div>
 
 <script>
